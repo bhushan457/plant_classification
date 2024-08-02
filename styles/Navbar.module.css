@@ -1,0 +1,19 @@
+.mainNav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.navList{
+    display: flex;
+    gap:4rem;
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5rem;
+    white-space: nowrap;
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f6f8fa;
+    font-family: 'Poppins', sans-serif;
+}
+.routeBtn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 2rem;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 50vw;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                0px 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0px 18px 36px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+}
+
+.container .title{
+    padding: 25px;
+    background: #f6f8fa;
+}
+
+.container .title p{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title p::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right, #97c37b, #80B55C);
+}
+
+.userDetails{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.userDetails .inputBox{
+    width: calc(100% / 2 - 20px);
+    margin: 0 0 12px 0;
+}
+
+.inputBox label{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.inputBox label::after{
+    content: " *";
+    color: red;
+}
+
+.inputBox input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f6f8fa;
+    font-family: 'Poppins', sans-serif;
+    transition: all 120ms ease-out 0s;
+}
+
+
+.inputBox input:focus,
+.inputBox input:valid{
+    box-shadow: 0px 0px 0px 2px #AC8ECE;
+}
+
+form .gender{
+    padding: 0px 25px;
+}
+
+.regDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.regBtn{
+    height: 45px;
+    width: 5rem;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(to right, #97c37b, #80B55C);
+    border-radius: 5px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.regBtn:hover{
+    background: linear-gradient(to right, #97c37b, #80B55C);
+    cursor: pointer;
+}
+
+.plantImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+}
+.line{
+    height: 0%;
+    width: 100%;
+    border: 0.5px solid black;
+}
+
+@media screen and (max-width: 584px){
+
+    .userDetails{
+        max-height: 340px;
+        overflow-y: scroll;
+    }
+
+    .userDetails::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .userDetails .input_box{
+        width: 100%;
+    }
+
+    .gender .category{
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 419px){
+    .gender .category{
+        flex-direction: column;
+    }   
+}
