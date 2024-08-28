@@ -3,8 +3,22 @@ import style from '@/styles/Registerpage.module.css';
 import { useRouter } from 'next/router';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../lib/firebase'; // Adjust the path as needed
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Registerpage = () => {
+
+  const registerPage = useRef();
+
+  useGSAP(()=>{
+    gsap.from(registerPage.current,{
+      opacity:0,
+      scale:0,
+      duration:0.5
+    })  
+  })
+
   const router = useRouter();
 
   // State for form inputs
@@ -70,7 +84,7 @@ const Registerpage = () => {
 
   return (
     <>
-      <div className={style.main}>
+      <div ref={registerPage} className={style.main}>
         <div className={style.routeBtn}>
           <div className={style.homeIcon}>
             <button
